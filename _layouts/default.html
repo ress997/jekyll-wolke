@@ -1,0 +1,28 @@
+---
+layout: null
+---
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-US" }}">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+
+	<title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+	<meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+	<link rel="canonical" href="{{ page.url | absolute_url }}">
+
+	<link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+	<style>{% include custom-style.css %}</style>
+
+	{% include custom-head.html %}
+</head>
+<body>
+{% include header.html %}
+<main class="container">
+{% if page.title %}<h2>{{ page.title }}</h2>{% endif %}
+{{ content }}
+</main>
+{% include footer.html %}
+{% include custom-javascript.html %}
+</body>
+</html>
