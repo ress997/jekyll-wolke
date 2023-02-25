@@ -12,17 +12,14 @@ layout: null
 	<link rel="canonical" href="{{ page.url | absolute_url }}">
 
 	<link rel="stylesheet" href="https://unpkg.com/simpledotcss/simple.min.css">
-	<style>{% include custom-style.css %}</style>
-
 	{% include custom-head.html %}
 </head>
 <body>
-{% include header.html %}
-<main class="container">
-{% if page.title %}<h2>{{ page.title }}</h2>{% endif %}
-{{ content }}
-</main>
-{% include footer.html %}
-{% include custom-javascript.html %}
+	{% include header.html %}
+	<main class="container">
+		{% if page.title %}<h2>{{ page.title }}</h2>{% endif %}
+		{{ content }}
+	</main>
+	{% include footer.html %}
 </body>
 </html>
